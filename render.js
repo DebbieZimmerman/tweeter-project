@@ -5,12 +5,12 @@ const Renderer = function (){
         for (post of posts) {
             let postElement = $(`<div class="post" data-id="${post.id}">${post.text}</div>`)
             $('#posts').append(postElement)
-            $('#posts').append('<div class="comments">Comments:</div>')
+            $('#posts').append(`<div class="comments" data-id="comments${post.id}">Comments:</div>`)
             for (comment of post.comments) {
                 let commentId = comment.id
                 let commentText = comment.text
                 let commentElement = $(`<div class="comment" data-id="${commentId}">${commentText}</div>`) 
-                $('.comments').append(commentElement)
+                $(`.comments[data-id="comments${post.id}"]`).append(commentElement)
             }
         }
        

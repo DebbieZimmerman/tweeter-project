@@ -3,15 +3,16 @@ const Renderer = function (){
         $('#posts').empty()
         
         for (post of posts) {
-            let postElement = $(`<div class="post post-text" data-id="${post.id}">${post.text}<button class="delete">x</button></div>`)
+            let postElement = $(`<div class="post post-text" data-id="${post.id}">${post.text}<i class="far fa-trash-alt delete"></i></div>`)
             $('#posts').append(postElement)
-            $('#posts').append(`<div class="comments" data-id="comments${post.id}">Comments: <input type="text" class="input-comment" placeholder="comment"><button class="add-comment">submit</button></div>`)
+            $('#posts').append(`<div class="comments" data-id="comments${post.id}"></div>`)
             for (comment of post.comments) {
                 let commentId = comment.id
                 let commentText = comment.text
-                let commentElement = $(`<div class="comment" data-id="${commentId}">${commentText}<button class="delete-comment">x</button></div>`) 
+                let commentElement = $(`<div class="comment" data-id="${commentId}">${commentText}<i class="far fa-trash-alt delete-comment"></i></div>`) 
                 $(`.comments[data-id="comments${post.id}"]`).append(commentElement)
             }
+            $(`.comments[data-id="comments${post.id}"]`).append(`<input type="text" class="input-comment" placeholder="Have something to add?"><i class="fas fa-plus-circle add-comments"></i>`)
         }
        
     } 

@@ -38,13 +38,7 @@ const Tweeter = function () {
                 count ++
             }
          } return count 
-        //  FIXED BUT DON'T LIKE so this is a problem because when I delete posts/comments I will no longer be counting them,
-        //  but this means I have 2 c4's etc. I see 4 possible fixes
-        //  1. change the counting so it is post sensitive, which seems to make the most sense, (And change post id# to be position in array sensitive)
-        // 2. define a commentCounter and postcounter in the module that will keep a hard count,
-        // 3. crazy amounts of loops with regex to fin the highest number comment/post throughout, 
-        // 4. renumber everything every time I remove  
-        // DID 2. want to do 4
+
     }
     let commentIdCount = commentCount()
 

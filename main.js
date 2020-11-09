@@ -30,7 +30,7 @@ $('#posts').on('click', '.delete-comment', function () {
     renderer.renderPosts(tweeter.getPosts())
 })
 
-$('#posts').on('click', '.add-comment', function () {
+$('#posts').on('click', '.add-comments', function () {
     text = $(this).closest('.comments').find('.input-comment').val()
     let p = $(this).closest('.comments').attr('data-id')
     p = p.slice(8)

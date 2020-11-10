@@ -1,0 +1,141 @@
+body{
+    display: grid;
+    background-color: #ecf0f1;
+    font-family: 'Ubuntu', sans-serif;
+    /* margin-left: 20vw;
+    margin-right: 25vw; */
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-areas: ". c .";
+}
+
+i {
+    color: #3498db;
+    /* background-color:  rgb(253, 249, 249); */
+    /* border: 1px solid #2980b9;
+    box-shadow: 1px 1px 1px #2c3e50; */
+    cursor: pointer;
+    font-size: x-large;
+    margin-left: 5px;
+    
+}
+
+#container{
+    grid-area: c;
+    display: grid;
+    grid-gap: 20px;
+    padding-left: 25px;
+    padding-right: 25px;
+    grid-template-columns: 3fr 1fr;
+    grid-template-areas: 
+    "h ."
+    "i b"
+    "p p"
+}
+
+#title{
+    grid-area: h;
+    color: #3498db;
+}
+
+#input{
+    grid-area: i;
+    padding: 10px;
+    font-size: 1.5vw;
+}
+
+#posts{
+    grid-area: p;
+    background-color: #afddfc;
+    border-radius: 5px;
+}
+
+#post{
+    grid-area: b;
+    padding: 10px;
+    background-color: #3498db;
+    border: 1px solid #2980b9;
+    box-shadow: 1px 1px 5px #2c3e50;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    font-size: 1.5vw;
+    font-weight: 400;
+}
+
+.post{
+    background-color:  rgb(252, 253, 253);
+    /* box-shadow: 1px 1px 3px; */
+    margin: 10px;
+    border-radius: 5px;
+    padding: 10px;
+
+}
+
+#post:active{
+    background-color: #2980b9
+}
+
+.post-text{
+    grid-area: t;
+    font-weight: 500;
+
+}
+
+.comments{
+    /* background-color: rgb(218, 222, 224); */
+    /* box-shadow: 1px 1px 3px; */
+    margin: 10px;
+    border-radius: 5px;
+    /* padding: 10px; */
+    margin-left: 10px;
+    margin: 10px;
+    font-weight: 600;
+    
+}
+
+.comment {
+    background-color: rgb(252, 253, 253);
+    /* box-shadow: 1px 1px 3px; */
+    margin: 10px;
+    border-radius: 5px;
+    margin-left: 10px;
+    font-weight: 400;
+    padding: 5px;
+}
+
+
+.delete{
+    grid-area: d;
+    cursor: pointer;
+    color: #20363b;
+    /* background-color: #181717; */
+    display: block;
+    text-align: end;
+    margin-left: 10px;
+    /* border-radius: 3px; */
+    /* font-size: 0.8em; */
+    font-size: medium;
+    border: none;
+    align-self: end;
+}
+
+.delete-comment{
+    cursor: pointer;
+    color: #0c0c0c;
+    font-size: small;
+    border: none;
+    display: block;
+    text-align: end;
+}
+
+.input-comment {
+    margin-left: 25px;
+    border-radius: 5px;
+    padding: 7px;
+}
+
+.add-comments {
+    font-size: large;
+    margin-left: 3px;
+   
+}
